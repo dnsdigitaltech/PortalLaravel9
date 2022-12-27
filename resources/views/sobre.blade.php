@@ -8,5 +8,6 @@
 </head>
 <body>
     <h1>Esta é a página Sobre de controller</h1>
+    <a href="{{route('pagina.contato')}}">Contato</a>
 </body>
 </html>

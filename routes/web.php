@@ -8,8 +8,8 @@ Route::get('/', function () {
 });
 
 Route::controller(DemoController::class)->group(function () {
-    Route::get('/sobre', 'Index');
-    Route::get('/contato', 'ContatoMetodo');
+    Route::get('/sobre', 'Index')->name('pagina.sobre');
+    Route::get('/contato', 'ContatoMetodo')->name('pagina.contato');
 });
 
 // Route::get('/sobre', [DemoController::class, 'Index']);
