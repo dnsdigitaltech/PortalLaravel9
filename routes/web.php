@@ -8,7 +8,7 @@ Route::get('/', function () {
 });
 
 Route::controller(DemoController::class)->group(function () {
-    Route::get('/sobre', 'Index')->name('pagina.sobre');
+    Route::get('/sobre', 'Index')->name('pagina.sobre')->middleware('verifica');
     Route::get('/contato', 'ContatoMetodo')->name('pagina.contato');
 });
 
