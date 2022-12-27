@@ -7,6 +7,6 @@
     <title>Página Sobre</title>
 </head>
 <body>
-    <h1>Esta é a página Sobre</h1>
+    <h1>Esta é a página Sobre de controller</h1>
 </body>
 </html>

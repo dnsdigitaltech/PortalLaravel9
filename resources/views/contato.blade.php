@@ -7,6 +7,6 @@
     <title>Página Contato</title>
 </head>
 <body>
-    <h1>Esta é a página Contato</h1>
+    <h1>Esta é a página Contato de controller</h1>
 </body>
 </html>
