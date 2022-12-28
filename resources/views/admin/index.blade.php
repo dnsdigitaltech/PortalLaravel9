@@ -1,5 +1,5 @@
 @extends('admin.admin_master')
-@section('name')    
+@section('admin')    
 
 <div class="page-content">
     <div class="container-fluid">
