@@ -7,7 +7,14 @@
                 <div class="card">
                     <div class="card-body">
                         <h4 class="card-title pb-4">Alterar Senha</h4>
-                        <form method="POST" action="{{route('store.profile')}}">
+
+                        @if (count($errors))
+                            @foreach ($errors->all() as $error)
+                                <p class="alert alert-danger alert-dismissable fade show">{{$error}}</p>                                
+                            @endforeach
+                        @endif
+
+                        <form method="POST" action="{{route('update.password')}}">
                             @csrf
                             <div class="row mb-3">
                                 <label for="name" class="col-sm-2 col-form-label">Senha antiga</label>
