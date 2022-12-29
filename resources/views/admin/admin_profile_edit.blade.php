@@ -36,7 +36,7 @@
                             <div class="row mb-3">
                                 <label class="col-sm-2 col-form-label"></label>
                                 <div class="col-sm-10">
-                                    <img id="showImage" class="avatar-lg" src="{{asset('backend/assets/images/small/img-5.jpg')}}" alt="">                                  
+                                    <img id="showImage" class="avatar-lg" src="{{(!empty($editData->profile_image))? url('upload/admin_images/'.$editData->profile_image):url('upload/no_image.jpg')}}" alt="">                                  
                                 </div>
                             </div>
                             <input type="submit" class="btn btn-info waves-effect waves-light" value="Editar Perfil">
