@@ -6,8 +6,8 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="card-title">Editar Perfil</h4>
-                        <form method="POST" action="{{route('store.profile')}}" enctype="multipart/form-data">
+                        <h4 class="card-title pb-4">Editar Perfil</h4>
+                        <form method="POST" action="{{route('update.password')}}" enctype="multipart/form-data">
                             @csrf
                             <div class="row mb-3">
                                 <label for="name" class="col-sm-2 col-form-label">Nome</label>
