@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\Home\HomeSliderController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,6 +32,11 @@ Route::controller(AdminController::class)->group(function(){
     Route::post('/atualiza/perfil', 'StoreProfile')->name('store.profile');
     Route::get('/alterar/senha', 'ChangePassword')->name('change.password');
     Route::post('/atualiza/senha', 'UpdatePassword')->name('update.password');
+});
+
+//Home Slide
+Route::controller(HomeSliderController::class)->group(function(){
+    Route::get('/home/slide', 'HomeSlider')->name('home.slide');
 });
 
 Route::middleware('auth')->group(function () {

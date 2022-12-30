@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('title')->nullable;
             $table->string('short_title')->nullable;
-            $table->string('home_slider')->nullable;
+            $table->string('home_slide')->nullable;
             $table->string('video_url')->nullable;
             $table->timestamps();
         });
