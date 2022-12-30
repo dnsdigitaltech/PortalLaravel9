@@ -7,8 +7,9 @@
                 <div class="card">
                     <div class="card-body">
                         <h4 class="card-title pb-4">Slider Página Principal</h4>
-                        <form method="POST" action="{{route('store.profile')}}" enctype="multipart/form-data">
+                        <form method="POST" action="{{route('update.slide', $homeSlide->id)}}" enctype="multipart/form-data">
                             @csrf
+                            <input type="hidden" name="id" value="{{$homeSlide->id}}">
                             <div class="row mb-3">
                                 <label for="title" class="col-sm-2 col-form-label">Título</label>
                                 <div class="col-sm-10">
@@ -30,13 +31,13 @@
                             <div class="row mb-3">
                                 <label for="home_slide" class="col-sm-2 col-form-label">Imagem do Slider</label>
                                 <div class="col-sm-10">
-                                    <input class="form-control" name="profile_image" type="file" id="image">
+                                    <input class="form-control" name="home_slide" type="file" id="image">
                                 </div>
                             </div>
                             <div class="row mb-3">
                                 <label class="col-sm-2 col-form-label"></label>
                                 <div class="col-sm-10">
-                                    <img id="showImage" class="avatar-lg" src="{{(!empty($homeSlide->home_slide))? url('upload/home_slide/'.$homeSlide->home_slide):url('upload/no_image.jpg')}}" alt="">                                  
+                                    <img id="showImage" class="avatar-lg" src="{{(!empty($homeSlide->home_slide))? url($homeSlide->home_slide):url('upload/no_image.jpg')}}" alt="">                                  
                                 </div>
                             </div>
                             <input type="submit" class="btn btn-info waves-effect waves-light" value="Editar Slide">
