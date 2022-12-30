@@ -46,6 +46,7 @@ Route::controller(AboutController::class)->group(function(){
     Route::get('/pagina/sobre', 'AboutPage')->name('about.page');
     Route::post('/atualiza/sobre', 'UpdateAbout')->name('update.about');
     Route::get('/sobre', 'HomeAbout')->name('home.about');
+    Route::get('/multi/imagens', 'AboutMultiImage')->name('about.multi.image');
 });
 
 Route::middleware('auth')->group(function () {
